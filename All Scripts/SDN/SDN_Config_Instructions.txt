@@ -1,0 +1,26 @@
+The following commands should be executed in the appropriate geni ubuntu 16.04 linux box
+These are categorized by functionality.
+
+Core routers:
+	bash Bird.sh
+	##	THIS STEP REQUIRES MANUAL CONFIGURATION
+	## An example of OSPF for BIRD is given
+	vi /usr/local/etc/bird.conf
+	##
+	cd bird-2.0.2/
+	bird
+
+
+Controller:
+	bash Ryu_Config.sh
+	## Now you will need to move your Application files to this linux
+	## box and execute:
+	ryu-manager controller.py
+
+OVS as an IPRewrite Router:
+	##	OVS needs to be configured carefully with
+	##	It's interfaces connected to 2 bridges
+	##	Edit the following fill appropriately before running
+	vi OVS_Config.sh
+
+	bash OVS_Config.sh 

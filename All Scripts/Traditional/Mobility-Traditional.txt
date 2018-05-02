@@ -1,0 +1,21 @@
+Following operations will have to be executed during a ping operation for mobility:
+
+ETR:
+	#Remove 192.168.1.0/24 subnet from ETR config file
+	#restart oor
+
+ETR2:
+	#Add 192.168.1.0/24 subnet to ETR config file
+
+	#RUN:
+		# Adds route to new 1.0/24 subnet
+		bash 3to1.sh
+
+Client3:
+	#Add 192.168.1.0/24 and remove the 192.168.3.0/24 IP on the interface 
+	bash scr3to1.sh
+
+	#restart oor
+
+# You should now see MAP resolver update mapping
+# Ping will now continue working after cache timeout(10 mins) and packet loss

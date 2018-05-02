@@ -1,0 +1,32 @@
+The following commands should be executed in the appropriate geni ubuntu 16.04 linux box
+These are categorized by functionality.
+
+Core routers:
+	bash Bird.sh
+	##	THIS STEP REQUIRES MANUAL CONFIGURATION
+	## An example of OSPF for BIRD is given
+	vi /usr/local/etc/bird.conf
+	##
+	cd bird-2.0.2/
+	bird
+
+
+
+xTR's:
+	bash OOR_Config.sh
+	##	THIS STEP REQUIRES MANUAL CONFIGURATION
+	##	An example is given in the "Config Examples" folder
+	vi /etc/oor.conf
+
+	## Now to run xTR's
+	oor -f /etc/oor.conf
+
+
+Map Server/Resolver:
+	bash OOR_Config.sh
+	##	THIS STEP REQUIRES MANUAL CONFIGURATION
+	##	An example is given in the "Config Examples" folder
+	vi /etc/oor.conf
+
+	## Now to run MapServer/Resolver
+	oor -f /etc/oor.conf
